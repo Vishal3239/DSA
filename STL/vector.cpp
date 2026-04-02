@@ -61,17 +61,20 @@ int main(){
     vector<int>L1={1,2,3,5,7};
     vector<int>L2={1,2,3};
     int m= L1.size();
-    int n=L2.size();
-    for(int i=m-1;i>=0;--i){
-        if(n!=0){
-            --n;
-            cout<<L1[i]+L2[n]<<" ";
+    // int n=L2.size();
+    // for(int i=m-1;i>=0;--i){
+    //     if(n!=0){
+    //         --n;
+    //         cout<<L1[i]+L2[n]<<" ";
             
-        }else{
-            cout<<L1[i]+0<<" ";
-        }
+    //     }else{
+    //         cout<<L1[i]+0<<" ";
+    //     }
         
-    }
+    // }
+    reverse(L1.begin()+2,L1.end());
+    for(auto x:L1)
+    cout<<x<<" ";
     
 
 
