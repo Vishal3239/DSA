@@ -9,8 +9,7 @@ int closestTarget(vector<string>& words, string target, int startIndex) {
             int circularDist = min(d, n - d);
             ans = min(ans, circularDist);
         } 
-    }
-    
+    } 
     return (ans==INT_MAX)?-1:ans;
 }
 int main(){
