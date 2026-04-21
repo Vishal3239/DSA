@@ -25,7 +25,7 @@ bool isValidSudoku(vector<vector<char>>& board) {
             unordered_set<char>st;
             for(int i = 0 ; i < 3; ++i){
                 for(int j=0;j<3;++j){
-                    char val = board[boxRow*3+i][boxCol+j];
+                    char val = board[boxRow*3+i][boxCol*3+j];
                     if(val=='.') continue;
                     if(st.count(val)) return false;
                     st.insert(val);
