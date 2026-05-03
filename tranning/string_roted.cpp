@@ -11,17 +11,17 @@ int main(){
         cout<<"false";
         return 0;
     }
-    int j=0;
+    int count=0;
     for(int i=0;i<n;i++){
-        if(j!=m){
-            if(s2[j]==temp[i]){
-                j++;
-            }
+        int j=0;
+        while (j < s2.size() && temp[i + j] == s2[j]) {
+            j++;
         }
+        count=j;
     }
-    if(j==m)
-    cout<<"true";
-    else
+    if(count==m)
+        cout<<"true";
+        else
     cout<<"false";
     return 0;
 }
