@@ -3,27 +3,23 @@ using namespace std;
 bool rotateString(string s, string goal)
 {
     string temp = s + s;
-    int j = 0;
-    bool flag = true;
-    for (int i = 0; i < temp.size(); ++i)
+    int n = temp.length();
+    int m = goal.length();
+    if (m != s.length())
     {
-        if (j != goal.size())
-        {
-            if (temp[i] == goal[j])
-            {
-                flag = false;
-                j++;
-            }
-            else
-            {
-                flag = true;
-            }
-        }
-    }
-    if (flag)
         return false;
-    else
-        return true;
+    }
+    for (int i = 0; i <= n - m; i++)
+    {
+        int j = 0;
+        while (j < m && temp[i + j] == goal[j])
+        {
+            j++;
+        }
+        if (j == m)
+            return true;
+    }
+    return false;
 }
 int main()
 {
