@@ -41,6 +41,5 @@ int main()
     cin >> s1 >> s2;
     Solution obj;
     cout<< obj.compareVersion(s1,s2);
-
     return 0;
 }
