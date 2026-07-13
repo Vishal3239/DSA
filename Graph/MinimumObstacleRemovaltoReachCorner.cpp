@@ -44,7 +44,7 @@ public:
         
     }
 };
-int main(){
+int main(){ 
     int m,n;
     cin>>m>>n;
     vector<vector<int>>grid(m,vector<int>(m));
