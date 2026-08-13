@@ -1,16 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution
 {
 public:
     int reductionOperations(vector<int> &nums)
     {
-        sort(nums.begin(), nums.end(), greater<int>());
-        int count = 0;
-        int n = *min_element(nums.begin(), nums.end());
-        
+        int n = nums.size();
+        int operation = 0;
+        sort(nums.begin(), nums.end());
+        for (int i = 1; i < n; ++i)
+        {
+            operation += n - i;
+        }
+        return operation;
     }
 };
+
 int main()
 {
     int n;
@@ -21,6 +27,7 @@ int main()
         cin >> nums[i];
     }
     Solution obj;
-    cout<<obj.reductionOperations(nums);
+    cout << obj.reductionOperations(nums);
+
     return 0;
 }
